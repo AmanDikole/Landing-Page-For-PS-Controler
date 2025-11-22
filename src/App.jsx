@@ -8,8 +8,6 @@ import Logo from "./assets/PlayStation-Logo.wine.svg"
 import WhiteCtrl from "./assets/const3.png" 
 import RedCtrl from "./assets/cont2.png" 
 import BlackCtrl from "./assets/cont3.png" 
-
-// Enhanced Data Structure
 const controllers = [
   {
     id: 0,
@@ -47,7 +45,7 @@ function App() {
   const [active, setActive] = useState(0);
 
   return (
-    
+    <>
     <div className={`min-h-screen transition-colors duration-700 ease-in-out ${controllers[active].theme} font-sans overflow-hidden relative`}>
       <header className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto relative z-20">
         <div className="w-16">
@@ -113,8 +111,6 @@ function App() {
         </div>
 
       </main>
-
-      {/* --- Bottom: Circle Rotation Selector --- */}
       <div className="absolute bottom-0 left-0 w-full h-48 flex items-end justify-center overflow-hidden z-30 pointer-events-none">
         
         <div className="relative w-full max-w-3xl flex justify-center items-end h-full pb-10">
@@ -156,9 +152,11 @@ function App() {
           })}
         </div>
       </div>
-
     </div>
-  )
+    <div>
+    </div>
+    </>
+)
 }
 
 export default App
